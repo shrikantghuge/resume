@@ -33,7 +33,7 @@ body a:hover{
 }
 /*-- top-nav --*/  
 .top-nav {
-    background: #ec407a;
+    background: #000000;
 }
 .nav > li {
     display: inline-block;
@@ -178,7 +178,7 @@ h4.modal-title {
     color: #fff;
 }
 .about h3 span {
-    color: #f3286c;
+    color: #1dadd3;
 }
 .about h4 {
     font-size: 1.2em;
@@ -260,7 +260,7 @@ p {
     border-radius: 0;
 }
 .progress-bar { 
-    background-color: #b3315d;
+    background-color: #424242;
 }
 .bar-grids h6 {
     font-size: 1em;
@@ -277,6 +277,9 @@ p {
 }
 /*-- //skills --*/
 /*-- experience --*/
+.experience-desc{
+	padding: 2%;
+}
 .experience-grids {
     width: 85%;
     margin: 0 auto;
@@ -284,10 +287,10 @@ p {
 .experience-left {
     float: left;
     width: 30%;
-    background: #ec407a;
+    background: #3a3721;
     text-align: center;
     padding: 2em 0;
-    border: 2px solid #ec407a;
+    border: 2px solid #fff057;
 	-webkit-transition: .5s all;
 	-moz-transition: .5s all;
 	transition: .5s all;
@@ -297,7 +300,7 @@ p {
 .experience-right {
     float: right;
     width: 70%;
-    border: 1px solid #ec407a;
+    border: 1px solid #fff057;
 	padding: 1.5em;
 }
 .experience-left h3 {
@@ -354,7 +357,7 @@ p {
 	width: 100%;
 }
 .gallery-w3ls-hover .view-caption {
-	background-color: rgba(236, 64, 122, 0.85);
+	background-color: #fff057;
 	border: 5px solid #fff;
 	bottom: 0;
 	color: #fff;
@@ -478,8 +481,8 @@ p {
     font-size: 1em;
     margin: 1em 0 0 0;
     -webkit-appearance: none;
-    background: #ec407a;
-    border: solid 1px #ec407a; 
+    background: #847e40;
+    border: solid 1px #fff057; 
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 	-o-border-radius: 3px;
@@ -500,7 +503,7 @@ p {
 .footer {
     padding: 2em 0;
     text-align: center;
-    background: #1F1F1F;
+    background: #000000;
 }
 .footer p {
     color: #fff;
