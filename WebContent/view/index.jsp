@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Easy Resume a Personal Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title> 
+<title>Shrikant Ghuge | Software Developer</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Easy Resume Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -20,6 +20,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //Custom Theme files -->
 <!-- js -->
 <script src="js/jquery-2.2.3.min.js"></script> 
+<script src="js/resume.js"></script>
 <!-- //js -->
 <!-- web-fonts -->
 <link href='//fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
@@ -39,7 +40,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<div class="menu">
 					<ul class="nav navbar"> 
-						<li><a href="index.html" class="w3ls-hover"><span data-letters="Home">Home</span></a></li>
+						<li><a href="." class="w3ls-hover"><span data-letters="Home">Home</span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#about" class="w3ls-hover"><span data-letters="About">About </span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#skill" class="w3ls-hover"><span data-letters="Skills">Skills</span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#experience" class="w3ls-hover"><span data-letters="Experience">Experience </span></a></li>
@@ -384,29 +385,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<div style="text-decoration:none; overflow:hidden; height:500px; width:500px; max-width:100%;"><div id="my-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Acolade,+Pune,+Maharashtra,+India&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="google-maps-code" rel="nofollow" href="https://www.interserver-coupons.com" id="make-map-information">https://www.interserver-coupons.com</a><style>#my-map-canvas img{max-width:none!important;background:none!important;}</style></div><script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=fcdfd371-8bb6-9083-f045-97d21c7bd471&c=google-maps-code&u=1477197134" defer="defer" async="async"></script>
 							</div>
 							<div class="col-md-6 contact-right">
-								<form action="#" method="post">
+								
 									<div class="styled-input agile-styled-input-top">
-										<input type="text" name="Name" required="">
+										<input type="text" name="Name" id="name" required="">
 										<label>Name</label>
 										<span></span>
 									</div>
 									<div class="styled-input">
-										<input type="text" name="Email" required=""> 
+										<input type="text" name="Email" id="email" required=""> 
 										<label>Email</label>
 										<span></span>
 									</div> 
 									<div class="styled-input">
-										<input type="text" name="Subject" required="">
+										<input type="text" name="Subject" id="subject" required="">
 										<label>Subject</label>
 										<span></span>
 									</div>
 									<div class="styled-input">
-										<textarea name="Message" required=""></textarea>
+										<textarea name="Message" id="message" required=""></textarea>
 										<label>Message</label>
 										<span></span>
 									</div>	 
-									<input type="submit" value="SEND">
-								</form>
+									<input type="submit" id="enquiry_button"value="SEND">								
 							</div>
 							<div class="clearfix"> </div>
 						</div>  
@@ -420,7 +420,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- footer -->
 	<div class="footer">
 		<div class="container">
-			<p>© 2016 Easy Resume. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			<p>Developed by Shrikant Ghuge | Design by <a href="http://w3layouts.com">W3layouts</a></p>
 		</div>
 	</div>
 	<!-- //footer --> 
