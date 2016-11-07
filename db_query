@@ -1,0 +1,49 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               5.5.42 - MySQL Community Server (GPL)
+-- Server OS:                    Win32
+-- HeidiSQL Version:             9.1.0.4867
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Dumping database structure for resprd
+CREATE DATABASE IF NOT EXISTS `resprd` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `resprd`;
+
+
+-- Dumping structure for table resprd.enquiry
+CREATE TABLE IF NOT EXISTS `enquiry` (
+  `name` varchar(150) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `subject` varchar(250) DEFAULT NULL,
+  `message` varchar(1000) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table resprd.enquiry: ~0 rows (approximately)
+DELETE FROM `enquiry`;
+/*!40000 ALTER TABLE `enquiry` DISABLE KEYS */;
+INSERT INTO `enquiry` (`name`, `email`, `subject`, `message`) VALUES
+	('asd', 'asd', 'asd', 'asd'),
+	('asd', 'asd', 'asd', 'asd');
+/*!40000 ALTER TABLE `enquiry` ENABLE KEYS */;
+
+
+-- Dumping structure for table resprd.visitor_details
+CREATE TABLE IF NOT EXISTS `visitor_details` (
+  `name` varchar(150) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `phone` varchar(300) DEFAULT NULL,
+  `cause` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table resprd.visitor_details: ~0 rows (approximately)
+DELETE FROM `visitor_details`;
+/*!40000 ALTER TABLE `visitor_details` DISABLE KEYS */;
+/*!40000 ALTER TABLE `visitor_details` ENABLE KEYS */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
