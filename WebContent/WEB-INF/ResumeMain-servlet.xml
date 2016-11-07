@@ -8,12 +8,27 @@
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	
 	
-   <context:component-scan base-package="in.shrikant.resume" />
+   <context:component-scan base-package="in.shrikant.resume.controller" />
 
    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
       <property name="prefix" value="/view/" />
       <property name="suffix" value=".jsp" />
    </bean>
    
-
+   <!-- DB pooling mechanism -->
+	<bean id="springDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" >
+	   <property name="url" value="jdbc:mysql://localhost:3306/RESPRD" />
+	   <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	   <property name="username" value="root" />
+	   <property name="password" value="root" />
+	   <property name="removeAbandoned" value="true"/>
+	   <property name="initialSize" value="20" />
+	   <property name="maxActive" value="30" />
+	</bean>
+	
+	<!-- Applicaion Bean creation -->
+	<bean name="ServiceBean" class="in.shrikant.resume.service.MainServiceImpl" scope="prototype"></bean>
+	<bean name="DAOBean" class="in.shrikant.resume.dao.MainDaoImpl">
+		<property name="dataSource" ref="springDataSource"></property>
+	</bean>
 </beans>

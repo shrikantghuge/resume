@@ -139,22 +139,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="skills"> 
 						<div class="col-md-6 bar-grids">
 							<h4><span class="glyphicon glyphicon-cog"></span> Technical Skills </h4>
-							<h6>Java Technologies <span> 80% </span></h6>
+							<h6>Java Technologies <span> 90% </span></h6>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped active" style="width: 80%">
 								</div>
 							</div>
-							<h6>Web UI Design and Development <span> 78% </span></h6>
+							<h6>Web UI Design and Development <span> 85% </span></h6>
 							<div class="progress  w3-agile">
 								<div class="progress-bar progress-bar-striped active" style="width: 70%">
 								</div>
 							</div>
-							<h6>Development Operations<span>70% </span></h6>
+							<h6>Development Operations<span>75% </span></h6>
 							<div class="progress  w3-agile">
 								<div class="progress-bar progress-bar-striped active" style="width: 90%">
 								</div>
 							</div>
-							<h6>Others(JMS,AWS,MuleSoft) <span> 65% </span></h6>
+							<h6>Others(JMS,AWS,MuleSoft) <span> 80% </span></h6>
 							<div class="progress  w3-agile">
 								<div class="progress-bar progress-bar-striped active" style="width: 75%">
 								</div>
@@ -375,7 +375,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="modal-content"> 
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title">Get In Touch</h4>
+					<h4 class="modal-title" id="getInTouch">Get In Touch</h4>
 				</div>
 				<div class="modal-body modal-spa">
 					<div class="contact"> 
