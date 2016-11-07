@@ -940,3 +940,20 @@ p.agile-br {
 
 }
 /*-- //responsive-design --*/
+
+.first-banner {
+	position: absolute;
+    top: 50%;
+    background-color: aqua;
+    left: 34%;
+    width: 36%;
+}
+
+.first-banner-text{
+	padding: 6%;
+}
+
+.visitor-input{
+	width: 100%;
+    margin: 2%;
+}
