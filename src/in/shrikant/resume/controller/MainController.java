@@ -1,13 +1,18 @@
 package in.shrikant.resume.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import in.shrikant.resume.modal.User;
 import in.shrikant.resume.model.Enquiry;
 import in.shrikant.resume.service.MainService;
 
@@ -40,5 +45,18 @@ public class MainController {
 		}else{
 			return "failure";
 		}		
+	}
+	
+	@RequestMapping(path="visitorInfo",method = RequestMethod.POST)
+	@ResponseBody
+	public void storeVisitorInfo(@ModelAttribute("userDetails")User userDetails,HttpServletRequest request){
+		String ipAddress = request.getHeader("X-FORWARDED-FOR");		
+		ipAddress = request.getRemoteAddr();
+		userDetails.setIpAddress(ipAddress);
+		if(userDetails!=null){
+			LOGGER.info("The visitor type is "+userDetails.getReqType() +" AND ip address is :"+ipAddress);
+			mainService.ipWiseVisitorDetails(userDetails);
+		}
+				
 	}
 }

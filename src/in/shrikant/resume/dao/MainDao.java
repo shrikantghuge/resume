@@ -15,5 +15,6 @@ public interface MainDao {
 	public boolean storeEnquiryForm(Enquiry enquiry) throws SQLException;
 	public boolean storeVisitorDetails(User user) throws Exception;
 	public void setDataSource(DataSource dataSource);
+	boolean storeSkippedVisitorDetails(User user) throws Exception;
 
 }

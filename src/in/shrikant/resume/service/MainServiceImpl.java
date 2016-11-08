@@ -38,8 +38,21 @@ public class MainServiceImpl  implements MainService{
 
 	@Override
 	public boolean ipWiseVisitorDetails(User user)  {
-		// TODO Auto-generated method stub
-		return false;
+		
+		if("skip".equalsIgnoreCase(user.getReqType())){
+			try {
+				mainDao.storeSkippedVisitorDetails(user);
+			} catch (Exception e) {
+				LOGGER.info("The db error occured for User Details :"+user+" Error is:"+e.getMessage());				
+			}
+		}else{
+			try {
+				mainDao.storeVisitorDetails(user);
+			} catch (Exception e) {
+				LOGGER.info("The db error occured for User Details :"+user+" Error is:"+e.getMessage());
+			}
+		}
+		return true;
 	}
 
 }

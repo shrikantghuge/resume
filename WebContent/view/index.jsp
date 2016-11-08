@@ -416,13 +416,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 	<!-- //modal-contact --> 
-	<div class="first-banner">
+	<div class="first-banner form-group">
 		<div class="first-banner-text">
 			<h2>First time visitor ??</h2>
-			<input type="text" placeholder="Name Please..." id="visitor-name" class="visitor-input">
-			<input type="text" Placeholder="Mobile No/ Email Id" id="visitor-contact" class="visitor-input">
+			<input type="text" placeholder="Name Please..." id="visitor-name" class="visitor-input form-control">
+			<input type="text" Placeholder="Mobile No/ Email Id" id="visitor-contact" class="visitor-input form-control">
 			<div></div>
-			<input type="button" id="visitor-submit" style="margin-left: 71%;" value="Submit">
+			<input type="button" id="visitor-skip" class="visitor-skip btn btn-info" value="Skip >>">
+			<input type="button" id="visitor-submit" class="visitor-button btn btn-info" value="Submit">
 		</div>
 	</div>
 	<!-- footer -->

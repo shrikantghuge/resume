@@ -944,16 +944,34 @@ p.agile-br {
 .first-banner {
 	position: absolute;
     top: 50%;
-    background-color: aqua;
+    background-color: rgb(43, 52, 63);
     left: 34%;
     width: 36%;
 }
 
 .first-banner-text{
 	padding: 6%;
+	color: white;
 }
 
 .visitor-input{
 	width: 100%;
     margin: 2%;
+}
+
+.visitor-button{
+	font-color:white;
+	margin-left: 86%;
+    margin-top: -12%;
+}
+.visitor-button:hover{
+	background-color: #2a343e;
+}
+
+.visitor-skip{
+	margin-top: 5%;
+}
+
+.visitor-button:hover{
+	background-color: #2a343e;
 }

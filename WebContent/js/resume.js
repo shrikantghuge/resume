@@ -50,8 +50,17 @@ $(document).ready(function(){
 				}
 			
 			});
-		
-		
 		}
+	});
+	
+	$("#visitor-skip").click(function(){
+		$(".first-banner").remove();
+		$.ajax({
+			url:"visitorInfo",
+			type:"POST",			
+			data : {
+				"reqType" : "skip"
+			}
+		});
 	});
 });

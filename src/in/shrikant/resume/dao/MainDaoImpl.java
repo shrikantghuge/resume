@@ -35,8 +35,14 @@ public class MainDaoImpl implements MainDao {
 
 	@Override
 	public boolean storeVisitorDetails(User user) throws Exception {
-		// TODO Auto-generated method stub
-		return false;
+		jdbcTemplate.execute("insert into visitor_details values(\"\",\""+user.getIpAddress()+"\",\"\",\"\")");
+		return true;
+	}
+	
+	@Override
+	public boolean storeSkippedVisitorDetails(User user) throws Exception {
+		jdbcTemplate.execute("insert into visitor_details values(\"\",\""+user.getIpAddress()+"\",\"\",\"\")");
+		return true;
 	}
 
 	@Override
