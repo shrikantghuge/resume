@@ -18,9 +18,9 @@ public class MainDaoImpl implements MainDao {
 	private static Logger LOGGER = Logger.getLogger(MainDaoImpl.class);
 	
 	@Override
-	public boolean checkIpStatus(UserIpDetails userIpDetails)
+	public boolean checkIpStatus(String ipAddress)
 			throws InvalidIpException {
-		// TODO Auto-generated method stub
+			jdbcTemplate.execute("select * from visitor_details where ipaddress=\""+ipAddress+"\"");
 		return false;
 	}
 

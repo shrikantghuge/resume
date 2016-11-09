@@ -11,7 +11,7 @@ import in.shrikant.resume.model.Enquiry;
 
 public interface MainDao {
 	
-	public boolean checkIpStatus(UserIpDetails userIpDetails) throws InvalidIpException;
+	public boolean checkIpStatus(String ipAddress) throws InvalidIpException;
 	public boolean storeEnquiryForm(Enquiry enquiry) throws SQLException;
 	public boolean storeVisitorDetails(User user) throws Exception;
 	public void setDataSource(DataSource dataSource);

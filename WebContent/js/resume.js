@@ -55,32 +55,53 @@ $(document).ready(function(){
 	
 	
 	$("#visitor-skip").click(function(){
-		$(".visitor-screen-block").remove();
+		getIP();
+		$(".first-banner-block").remove();
 		$.ajax({
 			url:"visitorInfo",
 			type:"POST",			
 			data : {
-				"reqType" : "skip"
+				"reqType" : "skip",
+				"ipAddress": jsonOfSystemIP
 			}
 		});
 	});
 	
-	$("#visitor-submit").click(function(){		
-		$.ajax({
-			url:"visitorInfo",
-			type:"POST",			
-			data : {
-				"reqType" : "submit",
-				"name":$("#visitor-name").val(),
-				"contactDetails":$("#visitor-contact").val()
-			},
-			success: function(data){
-				$(".visitor-screen-block").remove();
-			},
-			failure : function(){
-				$(".visitor-screen-block").remove();
-			}
-		});
+	$("#visitor-submit").click(function(){
+		getIP();
+		var isValid = true;
+		if($("#visitor-name").val()==""){
+			isValid = false;
+			document.getElementById("visitor-name").className += " formInvalid";
+		}
+		if($("#visitor-contact").val()==""){
+			isValid = false;
+			document.getElementById("visitor-contact").className += " formInvalid";
+		}
+		if(isValid){
+			$.ajax({
+				url:"visitorInfo",
+				type:"POST",			
+				data : {
+					"reqType" : "submit",
+					"name":$("#visitor-name").val(),
+					"contactDetails":$("#visitor-contact").val(),
+					"ipAddress":jsonOfSystemIP
+				},
+				success: function(data){
+					$(".first-banner-block").remove();
+				},
+				failure : function(){
+					$(".first-banner-block").remove();
+				}
+			});
+		}
 	});
 	
 });
+
+function getIP(){
+	$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+		  jsonOfSystemIP =JSON.parse(JSON.stringify(data, null, 2)).ip;
+	});
+};

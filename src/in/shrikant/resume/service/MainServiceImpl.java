@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import in.shrikant.resume.bean.UserIpDetails;
 import in.shrikant.resume.dao.MainDao;
+import in.shrikant.resume.exceptions.InvalidIpException;
 import in.shrikant.resume.modal.User;
 import in.shrikant.resume.model.Enquiry;
 
@@ -18,8 +19,13 @@ public class MainServiceImpl  implements MainService{
 	private MainDao mainDao;
 	
 	@Override
-	public boolean isIPRecorded(UserIpDetails userIpDetails){
-		// TODO Auto-generated method stub
+	public boolean isIPRecorded(String ipAddress){
+		try {
+			mainDao.checkIpStatus(ipAddress);
+		} catch (InvalidIpException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return false;
 	}
 

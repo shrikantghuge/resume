@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import in.shrikant.resume.modal.User;
@@ -23,8 +24,8 @@ public class MainController {
 	private MainService mainService; 
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public String getFirstPage(){
-		LOGGER.info("Entered into Main controller");
+	public String getFirstPage(@RequestParam("ipAddress")String ipAddress){
+		mainService.isIPRecorded(ipAddress);
 		return "index";
 		
 	}
@@ -48,9 +49,6 @@ public class MainController {
 	@RequestMapping(path="visitorInfo",method = RequestMethod.POST)
 	@ResponseBody
 	public void storeVisitorInfo(@ModelAttribute("userDetails")User userDetails,HttpServletRequest request){
-		String ipAddress = request.getHeader("X-FORWARDED-FOR");		
-		ipAddress = request.getRemoteAddr();
-		userDetails.setIpAddress(ipAddress);
 		LOGGER.info("The user details are ::"+userDetails);
 		if(userDetails!=null){			
 			mainService.ipWiseVisitorDetails(userDetails);

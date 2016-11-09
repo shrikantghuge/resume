@@ -44,8 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li><a href="#" data-toggle="modal" data-target="#about" class="w3ls-hover"><span data-letters="About">About </span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#skill" class="w3ls-hover"><span data-letters="Skills">Skills</span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#experience" class="w3ls-hover"><span data-letters="Experience">Experience </span></a></li>
-						<li><a href="#" data-toggle="modal" data-target="#education" class="w3ls-hover"><span data-letters="Education">Education </span></a></li>
-						<li><a href="#" data-toggle="modal" data-target="#work" class="w3ls-hover"><span data-letters="Work">Work</span></a></li>
+						<li><a href="#" data-toggle="modal" data-target="#education" class="w3ls-hover"><span data-letters="Education">Education </span></a></li>						
 						<li><a href="#" data-toggle="modal" data-target="#contact" class="w3ls-hover"><span data-letters="Contact">Contact </span></a></li> 
 						<li><a class="w3ls-icon" href="#"><span class="glyphicon glyphicon-save"></span></a></li> 
 					</ul>
@@ -416,14 +415,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 	<!-- //modal-contact --> 
-	<div class="first-banner form-group">
-		<div class="first-banner-text">
-			<h2>First time visitor ??</h2>
-			<input type="text" placeholder="Name Please..." id="visitor-name" class="visitor-input form-control">
-			<input type="text" Placeholder="Mobile No/ Email Id" id="visitor-contact" class="visitor-input form-control">
-			<div></div>
-			<input type="button" id="visitor-skip" class="visitor-skip btn btn-info" value="Skip >>">
-			<input type="button" id="visitor-submit" class="visitor-button btn btn-info" value="Submit">
+	<div class="first-banner-block">
+		<div class="first-banner form-group">
+			<div class="first-banner-text">
+				<h2>First time visitor ??</h2>
+				<input type="text" placeholder="Name Please..." id="visitor-name" class="visitor-input form-control">
+				<input type="text" Placeholder="Mobile No/ Email Id" id="visitor-contact" class="visitor-input form-control">
+				<div></div>
+				<input type="button" id="visitor-skip" class="visitor-skip btn btn-info" value="Skip>">
+				<input type="button" id="visitor-submit" class="visitor-button btn btn-info" value="Submit">
+			</div>
 		</div>
 	</div>
 	<!-- footer -->
