@@ -35,5 +35,9 @@ public class User {
 		this.ipAddress = ipAddress;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", contactDetails=" + contactDetails
+				+ ", reqType=" + reqType + ", ipAddress=" + ipAddress + "]";
+	}	
 }

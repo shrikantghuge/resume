@@ -41,6 +41,7 @@ public class MainServiceImpl  implements MainService{
 		
 		if("skip".equalsIgnoreCase(user.getReqType())){
 			try {
+				LOGGER.info("Going with request for skip");
 				mainDao.storeSkippedVisitorDetails(user);
 			} catch (Exception e) {
 				LOGGER.info("The db error occured for User Details :"+user+" Error is:"+e.getMessage());				

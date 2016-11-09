@@ -53,8 +53,9 @@ $(document).ready(function(){
 		}
 	});
 	
+	
 	$("#visitor-skip").click(function(){
-		$(".first-banner").remove();
+		$(".visitor-screen-block").remove();
 		$.ajax({
 			url:"visitorInfo",
 			type:"POST",			
@@ -63,4 +64,23 @@ $(document).ready(function(){
 			}
 		});
 	});
+	
+	$("#visitor-submit").click(function(){		
+		$.ajax({
+			url:"visitorInfo",
+			type:"POST",			
+			data : {
+				"reqType" : "submit",
+				"name":$("#visitor-name").val(),
+				"contactDetails":$("#visitor-contact").val()
+			},
+			success: function(data){
+				$(".visitor-screen-block").remove();
+			},
+			failure : function(){
+				$(".visitor-screen-block").remove();
+			}
+		});
+	});
+	
 });

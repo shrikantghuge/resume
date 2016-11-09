@@ -35,13 +35,15 @@ public class MainDaoImpl implements MainDao {
 
 	@Override
 	public boolean storeVisitorDetails(User user) throws Exception {
-		jdbcTemplate.execute("insert into visitor_details values(\"\",\""+user.getIpAddress()+"\",\"\",\"\")");
+		LOGGER.info("Into visitor detail dao");
+		//jdbcTemplate.execute("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+user.getReqType()==null?"":user.getReqType()+"\")");
+		jdbcTemplate.execute("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+user.getReqType()+"\")");
 		return true;
 	}
 	
 	@Override
 	public boolean storeSkippedVisitorDetails(User user) throws Exception {
-		jdbcTemplate.execute("insert into visitor_details values(\"\",\""+user.getIpAddress()+"\",\"\",\"\")");
+		jdbcTemplate.execute("insert into visitor_details values(\"skiped\",\""+user.getIpAddress()+"\",\"\",\"\")");
 		return true;
 	}
 
