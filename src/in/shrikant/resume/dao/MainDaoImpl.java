@@ -19,9 +19,15 @@ public class MainDaoImpl implements MainDao {
 	
 	@Override
 	public boolean checkIpStatus(String ipAddress)
-			throws InvalidIpException {
-			jdbcTemplate.execute("select * from visitor_details where ipaddress=\""+ipAddress+"\"");
-		return false;
+			throws InvalidIpException {		
+		LOGGER.info("select count(*) from visitor_details where ipaddress=\""+ipAddress+"\"");
+		Integer count = jdbcTemplate.queryForObject("select count(*) from visitor_details where ipaddress=\""+ipAddress+"\"", Integer.class);
+		LOGGER.info("MainDaoImpl.checkIpStatus visitor ip address  count is :"+count);
+		if(count>0){
+			return false;
+		}else{
+			return true;
+		}		
 	}
 
 	@Override

@@ -46,7 +46,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li><a href="#" data-toggle="modal" data-target="#experience" class="w3ls-hover"><span data-letters="Experience">Experience </span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#education" class="w3ls-hover"><span data-letters="Education">Education </span></a></li>						
 						<li><a href="#" data-toggle="modal" data-target="#contact" class="w3ls-hover"><span data-letters="Contact">Contact </span></a></li> 
-						<li><a class="w3ls-icon" href="#"><span class="glyphicon glyphicon-save"></span></a></li> 
+						<li><a class="w3ls-icon" href="pdf/SHRIKANT_M_GHUGE.pdf" target="_blank"><span class="glyphicon glyphicon-save"></span></a></li> 
 					</ul>
 					<div class="clearfix"> </div>
 				</div>
@@ -415,8 +415,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 	<!-- //modal-contact --> 
-	<div class="first-banner-block">
-		<div class="first-banner form-group">
+	<div class="first-banner-block" style="display:${isVisited}">
+		<div class="first-banner form-group" ">
 			<div class="first-banner-text">
 				<h2>First time visitor ??</h2>
 				<input type="text" placeholder="Name Please..." id="visitor-name" class="visitor-input form-control">

@@ -21,9 +21,8 @@ public class MainServiceImpl  implements MainService{
 	@Override
 	public boolean isIPRecorded(String ipAddress){
 		try {
-			mainDao.checkIpStatus(ipAddress);
+			return mainDao.checkIpStatus(ipAddress);
 		} catch (InvalidIpException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return false;

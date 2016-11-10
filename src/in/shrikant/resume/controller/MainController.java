@@ -5,10 +5,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import in.shrikant.resume.modal.User;
@@ -24,15 +24,23 @@ public class MainController {
 	private MainService mainService; 
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public String getFirstPage(@RequestParam("ipAddress")String ipAddress){
-		mainService.isIPRecorded(ipAddress);
+	public String getFirstPage(ModelMap model,HttpServletRequest request){
+		String ipAddress = request.getHeader("X-FORWARDED-FOR");		
+		ipAddress = request.getRemoteAddr();
+		boolean isVisited=  mainService.isIPRecorded(ipAddress);
+		LOGGER.info("IP Address is  ::-->"+ipAddress);
+		if(isVisited){
+			model.addAttribute("isVisited","block");
+		}else{
+			model.addAttribute("isVisited","none");
+		}			
 		return "index";
 		
 	}
 	
 	@RequestMapping(path="registerEnquiry",method = RequestMethod.GET)
 	@ResponseBody
-	public String registerEnquiry(@ModelAttribute("enquiry")Enquiry enquiry){
+	public String registerEnquiry(@ModelAttribute("enquiry")Enquiry enquiry,HttpServletRequest request){		
 		boolean response=false;
 		LOGGER.info("Entered into registerEnquiry");
 		if(enquiry!=null){		
@@ -48,7 +56,11 @@ public class MainController {
 	
 	@RequestMapping(path="visitorInfo",method = RequestMethod.POST)
 	@ResponseBody
-	public void storeVisitorInfo(@ModelAttribute("userDetails")User userDetails,HttpServletRequest request){
+	public void storeVisitorInfo(@ModelAttribute("userDetails")User userDetails,HttpServletRequest request){		
+		String ipAddress = request.getHeader("X-FORWARDED-FOR");
+		ipAddress = request.getRemoteAddr();
+		userDetails.setIpAddress(ipAddress);
+		LOGGER.info("We have got ip address as"+ipAddress);
 		LOGGER.info("The user details are ::"+userDetails);
 		if(userDetails!=null){			
 			mainService.ipWiseVisitorDetails(userDetails);

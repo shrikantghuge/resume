@@ -55,7 +55,6 @@ $(document).ready(function(){
 	
 	
 	$("#visitor-skip").click(function(){
-		getIP();
 		$(".first-banner-block").remove();
 		$.ajax({
 			url:"visitorInfo",
@@ -68,7 +67,6 @@ $(document).ready(function(){
 	});
 	
 	$("#visitor-submit").click(function(){
-		getIP();
 		var isValid = true;
 		if($("#visitor-name").val()==""){
 			isValid = false;
@@ -100,8 +98,8 @@ $(document).ready(function(){
 	
 });
 
-function getIP(){
+$(document).ready(function(){
 	$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
 		  jsonOfSystemIP =JSON.parse(JSON.stringify(data, null, 2)).ip;
 	});
-};
+});
