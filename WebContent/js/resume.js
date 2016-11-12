@@ -60,8 +60,7 @@ $(document).ready(function(){
 			url:"visitorInfo",
 			type:"POST",			
 			data : {
-				"reqType" : "skip",
-				"ipAddress": jsonOfSystemIP
+				"reqType" : "skip"
 			}
 		});
 	});
@@ -83,8 +82,7 @@ $(document).ready(function(){
 				data : {
 					"reqType" : "submit",
 					"name":$("#visitor-name").val(),
-					"contactDetails":$("#visitor-contact").val(),
-					"ipAddress":jsonOfSystemIP
+					"contactDetails":$("#visitor-contact").val()
 				},
 				success: function(data){
 					$(".first-banner-block").remove();
@@ -98,8 +96,3 @@ $(document).ready(function(){
 	
 });
 
-$(document).ready(function(){
-	$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
-		  jsonOfSystemIP =JSON.parse(JSON.stringify(data, null, 2)).ip;
-	});
-});

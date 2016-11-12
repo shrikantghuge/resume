@@ -16,11 +16,20 @@
    </bean>
    
    <!-- DB pooling mechanism -->
-	<bean id="springDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" >
+	<!-- <bean id="springDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" >
 	   <property name="url" value="jdbc:mysql://localhost:3306/RESPRD" />
 	   <property name="driverClassName" value="com.mysql.jdbc.Driver" />
 	   <property name="username" value="root" />
 	   <property name="password" value="root" />
+	   <property name="removeAbandoned" value="true"/>
+	   <property name="initialSize" value="20" />
+	   <property name="maxActive" value="30" />
+	</bean> -->
+	<bean id="springDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" >
+	   <property name="url" value="jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6144051" />
+	   <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	   <property name="username" value="sql6144051" />
+	   <property name="password" value="XuHVt4ZI2w" />
 	   <property name="removeAbandoned" value="true"/>
 	   <property name="initialSize" value="20" />
 	   <property name="maxActive" value="30" />

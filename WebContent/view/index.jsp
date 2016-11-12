@@ -10,8 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Shrikant Ghuge | Software Developer</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Easy Resume Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta name="keywords" content="Shrikant Ghuge, S M Ghuge, Ghuge, Shrikant Mahadeo Ghuge" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
@@ -23,7 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/resume.js"></script>
 <!-- //js -->
 <!-- web-fonts -->
-<link href='//fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
+<!-- <link href='//fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'> -->
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 <!-- //web-fonts --> 
 </head>
@@ -430,7 +429,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- footer -->
 	<div class="footer">
 		<div class="container">
-			<p>Developed by Shrikant Ghuge | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			<p>Developed by Shrikant Ghuge</a></p>
 		</div>
 	</div>
 	<!-- //footer --> 
