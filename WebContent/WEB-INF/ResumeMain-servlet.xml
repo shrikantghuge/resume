@@ -31,8 +31,8 @@
 	   <property name="username" value="sql6144051" />
 	   <property name="password" value="XuHVt4ZI2w" />
 	   <property name="removeAbandoned" value="true"/>
-	   <property name="initialSize" value="20" />
-	   <property name="maxActive" value="30" />
+	   <property name="initialSize" value="1" />
+	   <property name="maxActive" value="6" />
 	</bean>
 	
 	<!-- Applicaion Bean creation -->

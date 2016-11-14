@@ -30,9 +30,9 @@ public class MainController {
 		boolean isVisited=  mainService.isIPRecorded(ipAddress);
 		LOGGER.info("IP Address is  ::-->"+ipAddress);
 		if(isVisited){
-			model.addAttribute("isVisited","block");
-		}else{
 			model.addAttribute("isVisited","none");
+		}else{
+			model.addAttribute("isVisited","block");
 		}			
 		return "index";
 		
