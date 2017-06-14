@@ -1,8 +1,5 @@
 <!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
+Author: Shrikant Ghuge
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -10,19 +7,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Shrikant Ghuge | Software Developer</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Shrikant Ghuge, S M Ghuge, Ghuge, Shrikant Mahadeo Ghuge" />
+<meta name="keywords" content="Shrikant Ghuge, S M Ghuge, Ghuge, Shrikant Mahadeo Ghuge, Shrikant Ghuge Website" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all"> 
 <link rel="stylesheet" href="css/lightbox.css"> 
-<!-- //Custom Theme files -->
+
 <!-- js -->
 <script src="js/jquery-2.2.3.min.js"></script> 
 <script src="js/resume.js"></script>
 <!-- //js -->
 <!-- web-fonts -->
-<!-- <link href='//fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'> -->
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 <!-- //web-fonts --> 
 </head>
@@ -59,7 +55,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container">
 			<div class="banner-text agileinfo-text">  
 				<h1>Shrikant M Ghuge</h1> 
-				<h6>Application Designer & Developer</h6>
+				<h6>ESB Solution Expert / Web Developer</h6>
 			</div>  
 		</div>	
 	</div>	
@@ -80,7 +76,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="col-md-8 about-right wthree">
 							<h3>Hi, i'm <span>Shrikant M Ghuge</span></h3>
-							<h4>Web Designer & Developer </h4>
+							<h4>ESB Solution Expert/Web Developer </h4>
 							<ul class="address">
 								<li>
 									<ul class="agileits-address-text ">
@@ -116,8 +112,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div> 
 						<div class="clearfix"> </div> 
 						<div class="about-text agileits-w3layouts"> 
-							<p>Software development professional with over 2 years experience requirement gathering, designing, developing and maintaining web application and mobile application. </p>
-							<p class="agile-br"> Specific expertise in Algorithm Designing, JAVA(Spring MVC, Struts), RESTful WS, PLSQL, DevOps, Amazon WS, Android, Node Js, Angular JS, Backbone JS   </p>
+							<p>Software development professional with over 2.7 years experience requirement gathering, designing, developing and maintaining web application and mobile application. </p>
+							<p class="agile-br"> Specific expertise in ESB(Mulesoft, MMC), Microservices, API Designing, Algorithm Designing, JAVA(Spring MVC, Struts), RESTful WS, DevOps, Amazon WS, RAML</p>
 						</div>
 					</div>
 				</div> 
@@ -142,9 +138,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<div class="progress-bar progress-bar-striped active" style="width: 80%">
 								</div>
 							</div>
-							<h6>Web UI Design and Development <span> 85% </span></h6>
+							<h6>ESB Development(Mule,MMC, TIBCO) <span> 95% </span></h6>
 							<div class="progress  w3-agile">
-								<div class="progress-bar progress-bar-striped active" style="width: 70%">
+								<div class="progress-bar progress-bar-striped active" style="width: 95%">
 								</div>
 							</div>
 							<h6>Development Operations<span>75% </span></h6>
@@ -152,9 +148,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<div class="progress-bar progress-bar-striped active" style="width: 90%">
 								</div>
 							</div>
-							<h6>Others(JMS,AWS,MuleSoft) <span> 80% </span></h6>
+							<h6>Others(AWS,OAuth,RAML,Microservices) <span> 80% </span></h6>
 							<div class="progress  w3-agile">
-								<div class="progress-bar progress-bar-striped active" style="width: 75%">
+								<div class="progress-bar progress-bar-striped active" style="width: 80%">
 								</div>
 							</div>
 						</div> 
@@ -240,12 +236,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div> 
 						<div class="experience-grids experience-grids-btm">
 							<div class="experience-left">
-								<h3>2009<span>(3 Years Course)</span></h3>
-								<h5> University Name</h5>
+								<h3>2009<span>(1 Year Course)</span></h3>
+								<h5>CBSE Delhi</h5>
 							</div>
 							<div class="experience-right">
-								<h4>Diploma in Design</h4>
-								<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum iaculis enim, non convallis felis mattis at</p>
+								<h4>HSC</h4>
+								<p>75.2/100</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div> 
+						<div class="experience-grids experience-grids-btm">
+							<div class="experience-left">
+								<h3>2007<span>(1 Year Course)</span></h3>
+								<h5>CBSE Delhi</h5>
+							</div>
+							<div class="experience-right">
+								<h4>SSC</h4>
+								<p>79.5/100</p>
 							</div>
 							<div class="clearfix"> </div>
 						</div> 
@@ -254,119 +261,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</div>
 	</div>
-	<!-- //modal-education -->
-	<!-- modal-gallery -->
-	<div class="modal fade modal-gallery" id="work" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content"> 
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title">My Work</h4> 
-				</div>
-				<div class="modal-body modal-spa">
-					<div class="gallery"> 
-						<div class="gallery-row"> 
-							<div class="col-md-4 gallery-grids">
-								<div class="gallery-w3ls-hover">
-									<a href="images/g1.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-										<img src="images/g1.jpg" class="img-responsive zoom-img" alt=""/>
-										<div class="view-caption">
-											<h5>View+</h5> 
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-4 gallery-grids">
-								<div class="gallery-w3ls-hover">
-									<a href="images/g2.jpg" data-lightbox="example-set" data-title="Sed ut perspiciatis unde omnis iste natus error sit">
-										<img src="images/g2.jpg" class="img-responsive zoom-img" alt=""/>
-										<div class="view-caption">
-											<h5>View+</h5> 
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-4 gallery-grids">
-								<div class="gallery-w3ls-hover">
-									<a href="images/g3.jpg" data-lightbox="example-set" data-title="Eaque ipsa quae ab illo inventore veritatis et quasi">
-										<img src="images/g3.jpg" class="img-responsive zoom-img" alt=""/>
-										<div class="view-caption">
-											<h5>View+</h5> 
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-4 gallery-grids">
-								<div class="gallery-w3ls-hover">
-									<a href="images/g4.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-										<img src="images/g4.jpg" class="img-responsive zoom-img" alt=""/>
-										<div class="view-caption">
-											<h5>View+</h5> 
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-4 gallery-grids">
-								<div class="gallery-w3ls-hover">
-									<a href="images/g5.jpg" data-lightbox="example-set" data-title="Sed ut perspiciatis unde omnis iste natus error sit">
-										<img src="images/g5.jpg" class="img-responsive zoom-img" alt=""/>
-										<div class="view-caption">
-											<h5>View+</h5> 
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-4 gallery-grids">
-								<div class="gallery-w3ls-hover">
-									<a href="images/g6.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-										<img src="images/g6.jpg" class="img-responsive zoom-img" alt=""/>
-										<div class="view-caption">
-											<h5>View+</h5> 
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-4 gallery-grids">
-								<div class="gallery-w3ls-hover">
-									<a href="images/g3.jpg" data-lightbox="example-set" data-title="Sed ut perspiciatis unde omnis iste natus error sit">
-										<img src="images/g3.jpg" class="img-responsive zoom-img" alt=""/>
-										<div class="view-caption">
-											<h5>View+</h5> 
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-4 gallery-grids">
-								<div class="gallery-w3ls-hover">
-									<a href="images/g1.jpg" data-lightbox="example-set" data-title="Eaque ipsa quae ab illo inventore veritatis et quasi">
-										<img src="images/g1.jpg" class="img-responsive zoom-img" alt=""/>
-										<div class="view-caption">
-											<h5>View+</h5> 
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-4 gallery-grids">
-								<div class="gallery-w3ls-hover">
-									<a href="images/g2.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley">
-										<img src="images/g2.jpg" class="img-responsive zoom-img" alt=""/>
-										<div class="view-caption">
-											<h5>View+</h5> 
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<!--  light box js -->
-						<script src="js/lightbox-plus-jquery.min.js"> </script> 
-						<!-- //light box js-->  
-					</div>
-				</div> 
-			</div>
-		</div>
-	</div>
-	<!-- //modal-gallery -->
+	<!-- //modal-education -->	
 	<!-- modal-contact -->
 	<div class="modal fade modal-contact" id="contact" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">
@@ -432,6 +327,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<p>Developed by Shrikant Ghuge</a></p>
 		</div>
 	</div>
+	
+	
 	<!-- //footer --> 
 	
 	<!-- Bootstrap core JavaScript

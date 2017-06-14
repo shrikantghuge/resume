@@ -24,7 +24,7 @@ public class MainDaoImpl implements MainDao {
 	
 	@Override
 	public boolean checkIpStatus(String ipAddress)
-			throws InvalidIpException {
+			throws InvalidIpException {/*
 		PreparedStatement preparedStatement=null; 
 		try{	
 			connection = ConnectionProvider.getConnection();
@@ -52,50 +52,51 @@ public class MainDaoImpl implements MainDao {
 			}			
 		}
 		return false;				
-	}
+	*/
+		return true;
+		}
 
 	@Override
 	public boolean storeEnquiryForm(Enquiry enquiry) throws SQLException {	
-			LOGGER.info("storeEnquiryForm enter");			
+			/*LOGGER.info("storeEnquiryForm enter");			
 			connection = ConnectionProvider.getConnection();
 			PreparedStatement preparedStatement = connection.prepareStatement("insert into enquiry values (\""+enquiry.getName()+"\",\""+enquiry.getEmail()+"\",\""+enquiry.getSubject()+"\",\""+enquiry.getMessage()+"\")");
 			preparedStatement.executeUpdate();
 			LOGGER.debug("The final query is :"+"insert into enquiry values (\""+enquiry.getName()+"\",\""+enquiry.getEmail()+"\",\""+enquiry.getSubject()+"\",\""+enquiry.getMessage()+"\")");
 			LOGGER.info("storeEnquiryForm exit");
-			connection.close();
+			connection.close();*/
 			return true;
 			
 	}
 
 	@Override
 	public boolean storeVisitorDetails(User user) throws Exception {
-		LOGGER.info("Into visitor detail dao");
+		/*LOGGER.info("Into visitor detail dao");
 		connection = ConnectionProvider.getConnection();
 		PreparedStatement preparedStatement = connection.prepareStatement("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+user.getReqType()+"\")");
-		preparedStatement.executeUpdate();
+		preparedStatement.executeUpdate();*/
 		//jdbcTemplate.execute("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+user.getReqType()==null?"":user.getReqType()+"\")");
 		//jdbcTemplate.execute("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+user.getReqType()+"\")");
-		connection.close();
+		//connection.close();
 		return true;
 	}
 	
 	@Override
 	public boolean storeSkippedVisitorDetails(User user) throws Exception {
-		LOGGER.info("into storeSkippedVisitorDetails ");
+		/*LOGGER.info("into storeSkippedVisitorDetails ");
 		connection = ConnectionProvider.getConnection();
-		PreparedStatement preparedStatement = connection.prepareStatement("insert into visitor_details values(\"skiped\",\""+user.getIpAddress()+"\",\"\",\"\")");
-		preparedStatement.executeUpdate();
+		PreparedStatement preparedStatement = connection.prepareStatement("insert into visitor_details values(\"\",\""+user.getIpAddress()+"\",\"\",\"skiped\")");
+		preparedStatement.executeUpdate();*/
 		//jdbcTemplate.execute("insert into visitor_details values(\"skiped\",\""+user.getIpAddress()+"\",\"\",\"\")");
-		connection.close();
+		//connection.close();
 		return true;
 	}
 
 	@Override
-	public void setDataSource(DataSource dataSource) {	
-		
-		System.setProperty("sun.security.ssl.allowUnsafeRenegotiation", "true");
+	public void setDataSource(DataSource dataSource) {		
+		/*System.setProperty("sun.security.ssl.allowUnsafeRenegotiation", "true");
 		jdbcTemplate = new JdbcTemplate(dataSource);	
-		LOGGER.info("The jdbc template is initialized"+jdbcTemplate);
+		LOGGER.info("The jdbc template is initialized"+jdbcTemplate);*/
 	}
 
 }

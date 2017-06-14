@@ -13,7 +13,7 @@ public class ConnectionProvider {
 			}catch(Exception exception){
 				try {
 					Class.forName("com.mysql.jdbc.Driver");			
-					con=DriverManager.getConnection("jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6144051", "sql6144051", "XuHVt4ZI2w");
+					
 				} catch (ClassNotFoundException e1) {			
 					e1.printStackTrace();
 				} catch (SQLException e1) {			
@@ -23,7 +23,7 @@ public class ConnectionProvider {
 		}else{
 			try {
 				Class.forName("com.mysql.jdbc.Driver");			
-				con=DriverManager.getConnection("jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6144051", "sql6144051", "XuHVt4ZI2w");
+				
 			} catch (ClassNotFoundException e1) {			
 				e1.printStackTrace();
 			} catch (SQLException e1) {			
