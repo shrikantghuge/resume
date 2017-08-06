@@ -24,58 +24,57 @@ public class MainDaoImpl implements MainDao {
 	
 	@Override
 	public boolean checkIpStatus(String ipAddress)
-			throws InvalidIpException {/*
-		PreparedStatement preparedStatement=null; 
-		try{	
-			connection = ConnectionProvider.getConnection();
-			preparedStatement =  connection.prepareStatement("select * from visitor_details where ipaddress=\""+ipAddress+"\"");			
-			ResultSet resultSet =preparedStatement.executeQuery();
-			LOGGER.info("select * from visitor_details where ipaddress=\""+ipAddress+"\" AND result set next is :");
-			if(resultSet.next()){
-				LOGGER.info("MainDaoImpl.checkIpStatus visitor ip address  is present");
-				return true;
-			}else{
-				return false;
-			}
-		}catch(Exception exception){
-			exception.printStackTrace();
-		}finally{
-			try{
-				if(preparedStatement!=null){
-					preparedStatement.clearParameters();
+			throws InvalidIpException {
+			PreparedStatement preparedStatement=null; 
+			try{	
+				connection = ConnectionProvider.getConnection();
+				preparedStatement =  connection.prepareStatement("select * from visitor_details where ipaddress=\""+ipAddress+"\"");			
+				ResultSet resultSet =preparedStatement.executeQuery();
+				LOGGER.info("select * from visitor_details where ipaddress=\""+ipAddress+"\" AND result set next is :");
+				if(resultSet.next()){
+					LOGGER.info("MainDaoImpl.checkIpStatus visitor ip address  is present");
+					return true;
+				}else{
+					return false;
 				}
-				if(connection!=null){
-					connection.close();
-				}
-			}catch (Exception e) {
-				LOGGER.info("Exception occured in visit check "+e.getMessage());
-			}			
-		}
-		return false;				
-	*/
-		return true;
+			}catch(Exception exception){
+				exception.printStackTrace();
+			}/*finally{
+				try{
+					if(preparedStatement!=null){
+						preparedStatement.clearParameters();
+					}
+					if(connection!=null){
+						connection.close();
+					}
+				}catch (Exception e) {
+					LOGGER.info("Exception occured in visit check "+e.getMessage());
+				}			
+			}*/
+			return false;				
 		}
 
 	@Override
 	public boolean storeEnquiryForm(Enquiry enquiry) throws SQLException {	
-			/*LOGGER.info("storeEnquiryForm enter");			
+			LOGGER.info("storeEnquiryForm enter");			
 			connection = ConnectionProvider.getConnection();
 			PreparedStatement preparedStatement = connection.prepareStatement("insert into enquiry values (\""+enquiry.getName()+"\",\""+enquiry.getEmail()+"\",\""+enquiry.getSubject()+"\",\""+enquiry.getMessage()+"\")");
 			preparedStatement.executeUpdate();
 			LOGGER.debug("The final query is :"+"insert into enquiry values (\""+enquiry.getName()+"\",\""+enquiry.getEmail()+"\",\""+enquiry.getSubject()+"\",\""+enquiry.getMessage()+"\")");
 			LOGGER.info("storeEnquiryForm exit");
-			connection.close();*/
+			/*connection.close();*/
 			return true;
 			
 	}
 
 	@Override
 	public boolean storeVisitorDetails(User user) throws Exception {
-		/*LOGGER.info("Into visitor detail dao");
-		connection = ConnectionProvider.getConnection();
+		LOGGER.info("Into visitor detail dao");
+		/*connection = ConnectionProvider.getConnection();
 		PreparedStatement preparedStatement = connection.prepareStatement("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+user.getReqType()+"\")");
 		preparedStatement.executeUpdate();*/
-		//jdbcTemplate.execute("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+user.getReqType()==null?"":user.getReqType()+"\")");
+		LOGGER.info("Query to execute ::-->"+"insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+(user.getReqType()==null?"":user.getReqType()+"\")"));
+		jdbcTemplate.execute("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+(user.getReqType()==null?"":user.getReqType()+"\")"));
 		//jdbcTemplate.execute("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+user.getReqType()+"\")");
 		//connection.close();
 		return true;
@@ -83,20 +82,20 @@ public class MainDaoImpl implements MainDao {
 	
 	@Override
 	public boolean storeSkippedVisitorDetails(User user) throws Exception {
-		/*LOGGER.info("into storeSkippedVisitorDetails ");
-		connection = ConnectionProvider.getConnection();
+		LOGGER.info("into storeSkippedVisitorDetails ");
+		/*connection = ConnectionProvider.getConnection();
 		PreparedStatement preparedStatement = connection.prepareStatement("insert into visitor_details values(\"\",\""+user.getIpAddress()+"\",\"\",\"skiped\")");
 		preparedStatement.executeUpdate();*/
-		//jdbcTemplate.execute("insert into visitor_details values(\"skiped\",\""+user.getIpAddress()+"\",\"\",\"\")");
+		jdbcTemplate.execute("insert into visitor_details values(\"skiped\",\""+user.getIpAddress()+"\",\"\",\"\")");
 		//connection.close();
 		return true;
 	}
 
 	@Override
 	public void setDataSource(DataSource dataSource) {		
-		/*System.setProperty("sun.security.ssl.allowUnsafeRenegotiation", "true");
+		System.setProperty("sun.security.ssl.allowUnsafeRenegotiation", "true");
 		jdbcTemplate = new JdbcTemplate(dataSource);	
-		LOGGER.info("The jdbc template is initialized"+jdbcTemplate);*/
+		LOGGER.info("The jdbc template is initialized"+jdbcTemplate);
 	}
 
 }
