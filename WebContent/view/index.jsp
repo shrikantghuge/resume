@@ -75,7 +75,7 @@ Author: Shrikant Ghuge
 							<img src="images/img1.jpg" class="img-responsive" alt=""/>
 						</div>
 						<div class="col-md-8 about-right wthree">
-							<h3>Hi, i'm <span>Shrikant M Ghuge</span></h3>
+							<h3>Hi, I'm <span>Shrikant M Ghuge</span></h3>
 							<h4>ESB Solution Expert/Web Developer </h4>
 							<ul class="address">
 								<li>
