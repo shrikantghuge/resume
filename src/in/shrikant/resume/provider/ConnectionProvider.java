@@ -16,8 +16,6 @@ public class ConnectionProvider {
 					
 				} catch (ClassNotFoundException e1) {			
 					e1.printStackTrace();
-				} catch (SQLException e1) {			
-					e1.printStackTrace();
 				}
 			}			
 		}else{
@@ -25,8 +23,6 @@ public class ConnectionProvider {
 				Class.forName("com.mysql.jdbc.Driver");			
 				
 			} catch (ClassNotFoundException e1) {			
-				e1.printStackTrace();
-			} catch (SQLException e1) {			
 				e1.printStackTrace();
 			}
 		}
