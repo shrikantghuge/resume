@@ -5,7 +5,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn package
+      - mvn clean compile package
 artifacts:
   files:
     - resume-0.0.1-SNAPSHOT.war
