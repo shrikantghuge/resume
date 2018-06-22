@@ -276,7 +276,7 @@ p {
 }
 .experience-grids {
     width: 85%;
-    margin: 0 auto;
+    margin: 5px auto;
 }
 .experience-left {
     float: left;
@@ -1000,4 +1000,12 @@ input.formInvalid::-webkit-input-placeholder {
   font-weight: 400;
   src: local('Text Me One'), local('TextMeOne-Regular'), url(../fonts/Text_Me_OneReg.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.cert-image{
+	padding: 3px;
+	width: 332px;
+}
+.cert-grid{
+	margin: 38px auto;
 }

@@ -39,6 +39,7 @@ Author: Shrikant Ghuge
 						<li><a href="#" data-toggle="modal" data-target="#about" class="w3ls-hover"><span data-letters="About">About </span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#skill" class="w3ls-hover"><span data-letters="Skills">Skills</span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#experience" class="w3ls-hover"><span data-letters="Experience">Experience </span></a></li>
+						<li><a href="#" data-toggle="modal" data-target="#certification" class="w3ls-hover"><span data-letters="Certification">Certifications </span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#education" class="w3ls-hover"><span data-letters="Education">Education </span></a></li>						
 						<li><a href="#" data-toggle="modal" data-target="#contact" class="w3ls-hover"><span data-letters="Contact">Contact </span></a></li> 
 						<li><a class="w3ls-icon" href="pdf/SHRIKANT_M_GHUGE.pdf" target="_blank"><span class="glyphicon glyphicon-save"></span></a></li> 
@@ -55,7 +56,7 @@ Author: Shrikant Ghuge
 		<div class="container">
 			<div class="banner-text agileinfo-text">  
 				<h1>Shrikant M Ghuge</h1> 
-				<h6>ESB Solution Expert / Web Developer</h6>
+				<h6>Mulesoft Certified Architect / Java EE Developer</h6>
 			</div>  
 		</div>	
 	</div>	
@@ -76,7 +77,7 @@ Author: Shrikant Ghuge
 						</div>
 						<div class="col-md-8 about-right wthree">
 							<h3>Hi, I'm <span>Shrikant M Ghuge</span></h3>
-							<h4>ESB Solution Expert/Web Developer </h4>
+							<h4>Mulesoft Certified Architect / Java EE Developer </h4>
 							<ul class="address">
 								<li>
 									<ul class="agileits-address-text ">
@@ -112,8 +113,8 @@ Author: Shrikant Ghuge
 						</div> 
 						<div class="clearfix"> </div> 
 						<div class="about-text agileits-w3layouts"> 
-							<p>Software development professional with over 2.7 years experience requirement gathering, designing, developing and maintaining web application and mobile application. </p>
-							<p class="agile-br"> Specific expertise in ESB(Mulesoft, MMC), Microservices, API Designing, Algorithm Designing, JAVA(Spring MVC, Struts), RESTful WS, DevOps, Amazon WS, RAML</p>
+							<p>Software development professional with over 3.4 years experience requirement gathering, designing, developing and maintaining web application and mobile application. </p>
+							<p class="agile-br"> Specific expertise in Mulesoft, MMC, Microservices, API Designing, Algorithm Designing, JAVA(Spring MVC, Struts), RESTful WS, DevOps, Amazon WS, RAML</p>
 						</div>
 					</div>
 				</div> 
@@ -138,7 +139,7 @@ Author: Shrikant Ghuge
 								<div class="progress-bar progress-bar-striped active" style="width: 80%">
 								</div>
 							</div>
-							<h6>ESB Development(Mule,MMC, TIBCO) <span> 95% </span></h6>
+							<h6>Mulesoft Development <span> 95% </span></h6>
 							<div class="progress  w3-agile">
 								<div class="progress-bar progress-bar-striped active" style="width: 95%">
 								</div>
@@ -148,7 +149,7 @@ Author: Shrikant Ghuge
 								<div class="progress-bar progress-bar-striped active" style="width: 90%">
 								</div>
 							</div>
-							<h6>Others(AWS,OAuth,RAML,Microservices) <span> 80% </span></h6>
+							<h6>Others(AWS,OAuth,RAML,Microservices)<span> 80% </span></h6>
 							<div class="progress  w3-agile">
 								<div class="progress-bar progress-bar-striped active" style="width: 80%">
 								</div>
@@ -196,7 +197,7 @@ Author: Shrikant Ghuge
 					<div class="experience w3-agileits-info">  
 						<div class="experience-grids">
 							<div class="experience-left">
-								<h3>2014 - Now </h3>
+								<h3>Oct-2014 to July-2017</h3>
 								<h5>Zensar Technology </h5>
 							</div>
 							<div class="experience-right">
@@ -206,6 +207,17 @@ Author: Shrikant Ghuge
 								<p class="experience-desc">Designed and optimized license licensing processing tool for Cisco Systems</p>
 							</div>
 							<div class="clearfix"> </div>
+						</div>				
+						<div class="experience-grids">
+							<div class="experience-left">
+								<h3>Aug-2017 to Till Date</h3>
+								<h5>Capgemini India</h5>
+							</div>
+							<div class="experience-right">
+								<h4>Associate Consultant</h4>
+								<p class="experience-desc">API Factory: An portal which provides the APIs for various User Interfaces.</p>
+							</div>
+							<div class="clearfix"> </div>
 						</div>					
 					</div>
 				</div> 
@@ -213,6 +225,42 @@ Author: Shrikant Ghuge
 		</div>
 	</div>
 	<!-- //modal-experience -->
+	<!-- Model Certification : START -->
+	<div class="modal fade modal-experience" id="certification" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content"> 
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Certifications</h4>
+				</div>
+				<div class="modal-body modal-spa">
+					<div class="experience w3-agileits-info">  
+						<div class="experience-grids cert-grid">
+							<div class="experience-left">
+								<h3>Feb 2017</h3>
+								<h5>Mulesoft Certified Developer </h5>
+							</div>
+							<div class="experience-right cert-image">
+								<a href="https://training.mulesoft.com/award/certification/b9b7d825-2375-3bf5-a348-3d0e6dc61f7b"><img alt="MCD" src="images/MCD.png" style="height: 108px;"></a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>				
+						<div class="experience-grids">
+							<div class="experience-left">
+								<h3>Dec 2017</h3>
+								<h5>Mulesoft Certified Architect</h5>
+							</div>
+							<div class="experience-right cert-image">
+								<a href="https://training.mulesoft.com/award/certification/7c66648f-a267-3595-ba32-e705cb5cb8f0"><img alt="MCD" src="images/MCA.png" style="height: 108px;"></a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>					
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+	<!-- Model Certification : END -->
 	<!-- modal-education -->
 	<div class="modal fade modal-experience" id="education" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">

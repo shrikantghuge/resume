@@ -6,7 +6,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 public class ConnectionProvider {
 	private static Connection con=null;
-	public static Connection getConnection() {	
+	public static Connection getConnection() {
+		
 		if(con!=null){
 			try{
 				con.prepareStatement("select 1 from dual").executeQuery();

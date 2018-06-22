@@ -10,13 +10,11 @@ import javax.sql.DataSource;
 import org.apache.log4j.Logger;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import in.shrikant.resume.bean.UserIpDetails;
 import in.shrikant.resume.exceptions.InvalidIpException;
 import in.shrikant.resume.modal.User;
 import in.shrikant.resume.model.Enquiry;
-import in.shrikant.resume.provider.ConnectionProvider;
 
-public class MainDaoImpl implements MainDao {
+public class MainDaoImpl implements MainDao  {
 	
 	private JdbcTemplate jdbcTemplate;
 	private static Logger LOGGER = Logger.getLogger(MainDaoImpl.class);
@@ -25,9 +23,9 @@ public class MainDaoImpl implements MainDao {
 	@Override
 	public boolean checkIpStatus(String ipAddress)
 			throws InvalidIpException {
-			PreparedStatement preparedStatement=null; 
+			/*PreparedStatement preparedStatement=null; 
 			try{	
-				connection = ConnectionProvider.getConnection();
+				connection = jdbcTemplate.getDataSource().getConnection();
 				preparedStatement =  connection.prepareStatement("select * from visitor_details where ipaddress=\""+ipAddress+"\"");			
 				ResultSet resultSet =preparedStatement.executeQuery();
 				LOGGER.info("select * from visitor_details where ipaddress=\""+ipAddress+"\" AND result set next is :");
@@ -39,30 +37,30 @@ public class MainDaoImpl implements MainDao {
 				}
 			}catch(Exception exception){
 				exception.printStackTrace();
-			}/*finally{
-				try{
-					if(preparedStatement!=null){
-						preparedStatement.clearParameters();
-					}
-					if(connection!=null){
-						connection.close();
-					}
-				}catch (Exception e) {
-					LOGGER.info("Exception occured in visit check "+e.getMessage());
-				}			
+			}finally{
+				try {
+					connection.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
 			}*/
 			return false;				
 		}
 
 	@Override
 	public boolean storeEnquiryForm(Enquiry enquiry) throws SQLException {	
-			LOGGER.info("storeEnquiryForm enter");			
-			connection = ConnectionProvider.getConnection();
+		/*	LOGGER.info("storeEnquiryForm enter");			
+			connection = jdbcTemplate.getDataSource().getConnection();
 			PreparedStatement preparedStatement = connection.prepareStatement("insert into enquiry values (\""+enquiry.getName()+"\",\""+enquiry.getEmail()+"\",\""+enquiry.getSubject()+"\",\""+enquiry.getMessage()+"\")");
 			preparedStatement.executeUpdate();
 			LOGGER.debug("The final query is :"+"insert into enquiry values (\""+enquiry.getName()+"\",\""+enquiry.getEmail()+"\",\""+enquiry.getSubject()+"\",\""+enquiry.getMessage()+"\")");
 			LOGGER.info("storeEnquiryForm exit");
-			/*connection.close();*/
+			connection.close();
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}*/
 			return true;
 			
 	}
@@ -70,13 +68,8 @@ public class MainDaoImpl implements MainDao {
 	@Override
 	public boolean storeVisitorDetails(User user) throws Exception {
 		LOGGER.info("Into visitor detail dao");
-		/*connection = ConnectionProvider.getConnection();
-		PreparedStatement preparedStatement = connection.prepareStatement("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+user.getReqType()+"\")");
-		preparedStatement.executeUpdate();*/
-		LOGGER.info("Query to execute ::-->"+"insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+(user.getReqType()==null?"":user.getReqType()+"\")"));
-		jdbcTemplate.execute("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+(user.getReqType()==null?"":user.getReqType()+"\")"));
-		//jdbcTemplate.execute("insert into visitor_details values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+user.getReqType()+"\")");
-		//connection.close();
+		LOGGER.info("Query to execute ::-->"+"insert into visitor_details(name,ipaddress,phone,cause) values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+(user.getReqType()==null?"":user.getReqType()+"\")"));
+		//jdbcTemplate.execute("insert into visitor_details(name,ipaddress,phone,cause) values(\""+user.getName()+"\",\""+user.getIpAddress()+"\",\""+user.getContactDetails()+"\",\""+(user.getReqType()==null?"":user.getReqType()+"\")"));
 		return true;
 	}
 	

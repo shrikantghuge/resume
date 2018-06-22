@@ -25,10 +25,19 @@
 	   <property name="initialSize" value="20" />
 	   <property name="maxActive" value="30" />
 	</bean> -->
+	<bean id="springDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" >
+	   <property name="url" value="jdbc:mysql://35.200.228.166:3306/resprd" />
+	   <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	   <property name="username" value="root" />
+	   <property name="password" value="q3bi.rSd" />
+	   <property name="removeAbandoned" value="true"/>
+	   <property name="initialSize" value="1" />
+	   <property name="maxActive" value="6" />
+	</bean>
 	
 	<!-- Applicaion Bean creation -->
 	<bean name="ServiceBean" class="in.shrikant.resume.service.MainServiceImpl" scope="prototype"></bean>
 	<bean name="DAOBean" class="in.shrikant.resume.dao.MainDaoImpl">
-		<!-- <property name="dataSource" ref="springDataSource"></property> -->
+		<property name="dataSource" ref="springDataSource"></property>
 	</bean>
 </beans>
